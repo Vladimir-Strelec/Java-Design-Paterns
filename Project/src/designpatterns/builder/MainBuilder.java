@@ -1,5 +1,4 @@
-import designpatterns.builder.Human;
-import designpatterns.builder.HumanBuilder;
+package designpatterns.builder;
 
 public class MainBuilder {
     public static void main(String[] args) {
@@ -11,6 +10,12 @@ public class MainBuilder {
             .age(35)
             .job("Driver")
             .build();
-        System.out.print(h2.getFirstName() + " " + h2.getLastName() + " " + h2.getAge() + " " + h2.getJob());
+        System.out.println(h2.getFirstName() + " " + h2.getLastName() + " " + h2.getAge() + " " + h2.getJob());
+
+        Human h3 = new HumanBuilder()
+                .firstName("Vova")
+                .age(12)
+                .build();
+        System.out.println(h3.getFirstName());
     }
 }
