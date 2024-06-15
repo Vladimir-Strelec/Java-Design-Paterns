@@ -7,21 +7,10 @@ public class Bank extends Client{
         this.cloneCount = cloneCount;
     }
 
-    @Override
-    public void sendMessage() {
-        System.out.println("Great location for your new brunch");
-    }
 
     @Override
-    public void printInfo() {
-        System.out.println(this.name+" is on address "+this.address+" have: "+this.cloneCount);
-    }
+    public void acceptMsg(VisitorInterface visitorInterface) {
+        visitorInterface.visitBank();
 
-    public Integer getCloneCount() {
-        return cloneCount;
-    }
-
-    public void setCloneCount(Integer cloneCount) {
-        this.cloneCount = cloneCount;
     }
 }

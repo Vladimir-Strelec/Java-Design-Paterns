@@ -9,21 +9,7 @@ public class Shop extends Client{
     }
 
     @Override
-    public void sendMessage() {
-        System.out.println("New chocolates are available");
-    }
-
-    @Override
-    public void printInfo() {
-        System.out.println(this.name+" is on address "+this.address+" have: "+this.countWorkers+" persons");
-    }
-
-
-    public Integer getCountWorkers() {
-        return countWorkers;
-    }
-
-    public void setCountWorkers(Integer countWorkers) {
-        this.countWorkers = countWorkers;
+    public void acceptMsg(VisitorInterface visitorInterface) {
+        visitorInterface.visitMsgShop();
     }
 }

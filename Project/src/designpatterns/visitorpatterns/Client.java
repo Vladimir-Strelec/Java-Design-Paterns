@@ -9,6 +9,6 @@ public abstract class Client {
         this.address = address;
     }
 
-    abstract public void sendMessage();
-    abstract public void printInfo();
+    public abstract void acceptMsg(VisitorInterface visitorInterface);
+
 }
