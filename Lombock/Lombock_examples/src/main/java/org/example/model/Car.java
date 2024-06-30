@@ -9,7 +9,6 @@ import java.util.Objects;
 @EqualsAndHashCode
 @Getter
 @Setter
-@Builder
 
 public class Car {
     private String brand;
@@ -17,20 +16,20 @@ public class Car {
 
 
     ///Custom builder for brand///
-    public Car buildBrand(String brand) {
+    public Car brand(String brand) {
         this.brand = brand;
         return this;
     }
 
     ///Custom builder for model///
-    public Car buildModel(String model) {
+    public Car model(String model) {
         this.model = model;
         return this;
     }
 
     /* Custom builder, it returns Object that has parameters value is null by default */
     public Car build() {
-        return new Car();
+        return new Car(this.brand, this.model);
     }
     /// The information about returns object ///
     public String info() {
