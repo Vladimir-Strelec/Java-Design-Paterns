@@ -21,8 +21,13 @@ public class Main {
         System.out.println(car1.info());
         Car car2 = new Car();
 
-        System.out.println(car1.equals(car2));
+        Car car3 = Car.builder()
+                .brand("Oppel")
+                .model("Vectra")
+                .build();
 
+        System.out.println(car1.equals(car2));
+        System.out.println(car3.info());
 
 
     }

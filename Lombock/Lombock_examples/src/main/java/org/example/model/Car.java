@@ -9,6 +9,7 @@ import java.util.Objects;
 @EqualsAndHashCode
 @Getter
 @Setter
+@Builder
 
 public class Car {
     private String brand;
