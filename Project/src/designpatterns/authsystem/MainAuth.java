@@ -9,7 +9,16 @@ public class MainAuth {
         users.put("user1", "12345");
         users.put("user2", "98765");
 
-        DatabaseClass databaseClass = new DatabaseClass(users);
+        Database database = new Database(users);
+
+        Handler handler = new UserExistsHandler(database);
+        handler.setNextHandler(new ValidPasswordHandler(database));
+
+
+
+        AuthService service = new AuthService(handler);
+        service.login("user1", "12345");
+
 
 
 
