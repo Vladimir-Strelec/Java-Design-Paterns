@@ -28,7 +28,7 @@ public class Main {
 
         System.out.println(car1.equals(car2));
         System.out.println(car3.info());
-        System.out.println("This branch is MAIN and we will be test this branch");
+
 
 
     }
