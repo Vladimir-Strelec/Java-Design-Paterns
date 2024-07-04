@@ -27,8 +27,7 @@ public class Main {
                 .build();
 
         System.out.println(car1.equals(car2));
-        System.out.println(car3.info());
-        System.out.println(car3.info());
+
 
 
     }
